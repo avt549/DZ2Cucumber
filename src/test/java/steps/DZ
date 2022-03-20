@@ -1,0 +1,35 @@
+/*
+ДЗ #2: Реализовать BDD подход
+
+1) Реализовать выбор фабрики через фичу ("Я открываю браузер Chrome)
+
+2) Поиск указанного курса (название курса задается в фиче) и его выбора (в случае если несколько, то выбирается случайный)
+
+3) Поиск курсов,
+стартующих в указанную дату
+или позже указанной даты и
+вывод информации о них в консоль (название, дата старта)
+
+4) Перейти в раздел Курсы >
+Подготовительные курсы,
+выбрать самый дорогой и самый дешевый курс при помощи filter
+и вывод информации о нем в консоль.
+
+ */
+
+ Feature: Test Course that started in data
+     Scenario:
+       Given Open browser chrome
+       When Open page program courses
+       When Search course that started in data or later
+       Then Opened course in in data or later
+       Then Close browser
+
+   Feature: Print most expensive and cheapest courses
+     Scenario:
+       Given Open browser chrome
+       When Go to courses and click
+       When Go to preparatory courses and click
+       When Search most expensive and print
+       Then Search most cheapest and print
+       Then Close browser
